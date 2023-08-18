@@ -9,12 +9,16 @@
 80000800 00000098 80000800 0 floating_point_unavailable_exception_handler
 80000900 00000098 80000900 0 decrementer_exception_handler
 80000c00 0000001c 80000c00 0 system_call_exception_handler
-80000c1c 0000007c 80000c1c 0 zz_80000c1c_
+80000c1c 0000007c 80000c1c 0 some_exception_handler
 80000d00 00000098 80000d00 0 trace_exception_handler
 80000f00 00000098 80000f00 0 performance_monitor_interrupt_handler
 80001300 00000098 80001300 0 instruction_address_breakpoint_exception_handler
 80001400 00000098 80001400 0 system_management_interrupt_handler
 80001700 00000098 80001700 0 thermal_management_interrupt_exception_handler
+80003010 00000001 80003010 0 ExternalInterruptHandler
+80003090 000001 80003090  8 SIInterruptHandler 	RAM
+80003094 000001 80003094  8 __DVDInterruptHandler 	RAM
+80003098 000001 80003098  8 __OSResetSWInterruptHandler 	RAM
 80003100 00000040 80003100 0 __check_pad3
 80003140 00000194 80003140 0 main
 800032d4 00000030 800032d4 0 zz_800032d4_
