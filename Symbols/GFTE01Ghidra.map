@@ -1877,8 +1877,8 @@
   80057e54 000020 80057e54  4 PPCMffpscr 	Global
   80057e74 000028 80057e74  4 PPCMtfpscr 	Global
   80057e9c 000008 80057e9c  4 PPCMfhid2 	base
-  80057ea4 000008 80057ea4  4 PPCMtwpar 	base
-  80057eac 00000c 80057eac  4 zz_80057eac_ 	Global
+  80057ea4 000008 80057ea4  4 PPCMthid2 	base
+  80057eac 00000c 80057eac  4 PPCMfwpar 	Global
   80057eb8 000008 80057eb8  4 PPCMtwpar 	base
   80057ec0 000008 80057ec0  4 PPCMfhid2 	base
   80057ec8 000008 80057ec8  4 PPCMfhid2 	base
@@ -2033,31 +2033,31 @@
   80065bf8 000010 80065bf8  4 GXInit::IsWriteGatherBufferEmpty 	Global
   80065c08 000044 80065c08  4 GXInit::EnableWriteGatherPipe 	Global
   80065c4c 000028 80065c4c  4 GXInit::DisableWriteGatherPipe 	Global
-  80065c74 00006c 80065c74  4 __GXDefaultTexRegionCallback??? 	Global
-  80065ce0 000020 80065ce0  4 __GXDefaultTlutRegionCallback? 	Global
-  80065d00 00045c 80065d00  4 GXInit? 	Global
+  80065c74 00006c 80065c74  4 __GXDefaultTexRegionCallback 	Global
+  80065ce0 000020 80065ce0  4 __GXDefaultTlutRegionCallback 	Global
+  80065d00 00045c 80065d00  4 GXInit 	Global
   8006615c 000888 8006615c  4 __GXInitGX 	GXInit
   800663a8 000001 800663a8  8 zz_800663a8_ 	Global
   80066478 000001 80066478  8 zz_80066478_ 	Global
-  800669e4 000050 800669e4  4 GXCPInterruptHandler 	Global
-  80066a34 000040 80066a34  4 zz_80066a34_ 	Global
+  800669e4 000050 800669e4  4 GXOverflowHandler 	GXFifo
+  80066a34 000040 80066a34  4 GXUnderflowHandler 	Global
   80066a4c 000001 80066a4c  8 zz_80066a4c_ 	Global
-  80066a74 000078 80066a74  4 GXCPInterruptHandlerPart2 	Global
-  80066aec 0000c8 80066aec  4 zz_80066aec_ 	Global
-  80066bb4 000074 80066bb4  4 GXGetFifoBase 	GXFifo
+  80066a74 000078 80066a74  4 GXBreakpointHandler 	Global
+  80066aec 0000c8 80066aec  4 GXCPInterruptHandler 	Global
+  80066bb4 000074 80066bb4  4 GXInitFifoBase 	GXFifo
   80066c28 00006c 80066c28  4 GXInitFifoPtrs 	GXFifo
   80066c94 00000c 80066c94  4 GXInitFifoLimits 	GXFifo
   80066ca0 000100 80066ca0  4 GXSetCPUFifo 	GXFifo
   80066da0 00015c 80066da0  4 GXSetGPFifo 	Global
-  80066efc 000020 80066efc  4 zz_80066efc_ 	Global
-  80066f1c 0000cc 80066f1c  4 zz_80066f1c_ 	Global
-  80066fe8 000001 80066fe8  8 zz_80066fe8_ 	Global
+  80066efc 000020 80066efc  4 callsGXSaveCPUFifo 	Global
+  80066f1c 0000cc 80066f1c  4 GXSaveCPUFifo 	Global
+  80066fe8 000034 80066fe8  4 zz_80066fe8_ 	Global
   8006701c 00004c 8006701c  4 zz_8006701c_ 	Global
   80067068 000144 80067068  4 zz_80067068_ 	Global
   800671ac 000094 800671ac  4 zz_800671ac_ 	Global
   80067240 000008 80067240  4 FUN_80067240 	Global
   80067248 000008 80067248  4 FUN_80067248 	Global
-  80067250 000001 80067250  8 zz_80067250_ 	Global
+  80067250 000014 80067250  4 zz_80067250_ 	Global
   80067264 000044 80067264  4 zz_80067264_ 	Global
   800672a8 00007c 800672a8  4 zz_800672a8_ 	Global
   80067324 0000a0 80067324  4 zz_80067324_ 	Global
@@ -2068,45 +2068,45 @@
   8006749c 000028 8006749c  4 __GXFifoLink 	GXFifo
   800674c4 000030 800674c4  4 __GXWriteFifoIntEnable 	GXFifo
   800674f4 00002c 800674f4  4 __GXWriteFifoIntReset 	GXFifo
-  80067520 000001 80067520  8 zz_80067520_ 	Global
+  80067520 000028 80067520  4 zz_80067520_ 	Global
   80067548 0000d0 80067548  4 zz_80067548_ 	Global
   80067618 000050 80067618  4 zz_80067618_ 	Global
   80067668 000001 80067668  8 IPCGetBufferLo 	ipc
-  80067670 000008 80067670  4 IPCGetBufferLo 	ipc
+  80067670 000008 80067670  4 GXGetCPUFifo 	Global
   80067678 000008 80067678  4 IPCGetBufferLo 	ipc
   80067680 000008 80067680  4 IPCGetBufferLo 	ipc
   80067688 000001 80067688  8 zz_80067688_ 	Global
   80067698 0000c0 80067698  4 zz_80067698_ 	Global
   80067758 0000c8 80067758  4 zz_80067758_ 	Global
-  80067820 0000b4 80067820  4 zz_80067820_ 	Global
-  800678d4 0001d4 800678d4  4 zz_800678d4_ 	Global
-  80067aa8 000228 80067aa8  4 zz_80067aa8_ 	Global
-  80067cd0 000190 80067cd0  4 zz_80067cd0_ 	Global
-  80067e60 000148 80067e60  4 zz_80067e60_ 	Global
-  80067fa8 00006c 80067fa8  4 zz_80067fa8_ 	Global
+  80067820 0000b4 80067820  4 __GXXfVtxSpecs 	Global
+  800678d4 0001d4 800678d4  4 GXSetVtxDesc 	Global
+  80067aa8 000228 80067aa8  4 GXSetVtxDescv 	Global
+  80067cd0 000190 80067cd0  4 __GXSetVCD 	Global
+  80067e60 000148 80067e60  4 GXGetVtxDesc 	Global
+  80067fa8 00006c 80067fa8  4 GXGetVtxDescv 	Global
   80068014 000028 80068014  4 GXClearVtxDesc 	GXAttr
-  8006803c 000274 8006803c  4 zz_8006803c_ 	Global
-  800682b0 000284 800682b0  4 GX??? 	Global
-  80068534 000084 80068534  4 zz_80068534_ 	Global
-  800685b8 000174 800685b8  4 zz_800685b8_ 	Global
-  8006872c 000074 8006872c  4 zz_8006872c_ 	Global
+  8006803c 000274 8006803c  4 GXSetVtxAttrFmt 	Global
+  800682b0 000284 800682b0  4 GXSetVtxAttrFmtv 	Global
+  80068534 000084 80068534  4 __GXSetVAT 	Global
+  800685b8 000174 800685b8  4 GXGetVtxAttrFmt 	Global
+  8006872c 000074 8006872c  4 GXGetVtxAttrFmtv 	Global
   800687a0 000064 800687a0  4 GXSetArray 	Global
   80068804 000010 80068804  4 GxInvalidateVtxCache 	GXAttr
   80068814 000224 80068814  4 GXSetTexCoordGen2 	Global
   80068a38 000024 80068a38  4 GXSetNumTexGens 	GXAttr
-  80068a5c 000060 80068a5c  4 zz_80068a5c_ 	Global
+  80068a5c 000060 80068a5c  4 GXSetMisc 	Global
   80068ab4 000001 80068ab4  8 zz_80068ab4_ 	Global
-  80068abc 000058 80068abc  4 GX??? 	Global
-  80068b14 000034 80068b14  4 zz_80068b14_ 	Global
-  80068b48 00009c 80068b48  4 zz_80068b48_ 	Global
+  80068abc 000058 80068abc  4 GXFlush 	Global
+  80068b14 000034 80068b14  4 GXResetWriteGatherPipe 	Global
+  80068b48 00009c 80068b48  4 GXAbortFrame/__GXAbort? 	Global
   80068be4 000024 80068be4  4 zz_80068be4_ 	Global
-  80068c08 00006c 80068c08  4 zz_80068c08_ 	Global
-  80068c74 00000c 80068c74  4 zz_80068c74_ 	Global
-  80068c80 000058 80068c80  4 zz_80068c80_ 	Global
-  80068cd8 000054 80068cd8  4 zz_80068cd8_ 	Global
-  80068d2c 000020 80068d2c  4 zz_80068d2c_ 	Global
-  80068d4c 00001c 80068d4c  4 zz_80068d4c_ 	Global
-  80068d68 000001 80068d68  8 zz_80068d68_ 	Global
+  80068c08 00006c 80068c08  4 GXSetDrawSync 	Global
+  80068c74 00000c 80068c74  4 GXReadDrawSync 	Global
+  80068c80 000058 80068c80  4 GXSetDrawDone 	Global
+  80068cd8 000054 80068cd8  4 GXWaitDrawDone 	Global
+  80068d2c 000020 80068d2c  4 GXDrawDone 	Global
+  80068d4c 00001c 80068d4c  4 GXPixModeSync 	Global
+  80068d68 00001c 80068d68  4 GXTexModeSync 	Global
   80068d84 000014 80068d84  4 GXPokeAlphaMode 	Global
   80068d98 000010 80068d98  4 GXPokeAlphaRead 	Global
   80068da8 00001c 80068da8  4 GXPokeAlphaUpdate 	Global
@@ -2115,29 +2115,29 @@
   80068e5c 000014 80068e5c  4 GXPokeDstAlpha 	Global
   80068e70 00001c 80068e70  4 GXPokeDither 	Global
   80068e8c 000024 80068e8c  4 GXPokeZMode 	Global
-  80068eb0 000001 80068eb0  8 zz_80068eb0_ 	Global
-  80068ed4 000001 80068ed4  8 zz_80068ed4_ 	Global
-  80068ef4 000001 80068ef4  8 zz_80068ef4_ 	Global
-  80068f1c 000001 80068f1c  8 zz_80068f1c_ 	Global
-  80068f40 000044 80068f40  4 zz_80068f40_ 	Global
-  80068f84 000084 80068f84  4 zz_80068f84_ 	Global
-  80069008 000044 80069008  4 zz_80069008_ 	Global
-  8006904c 000080 8006904c  4 zz_8006904c_ 	Global
+  80068eb0 000024 80068eb0  4 GXPeekARGB 	Global
+  80068ed4 000020 80068ed4  4 GXPokeARGB 	Global
+  80068ef4 000028 80068ef4  4 GXPeekZ 	Global
+  80068f1c 000024 80068f1c  4 GXPokeZ 	Global
+  80068f40 000044 80068f40  4 GXSetDrawSyncCallback 	Global
+  80068f84 000084 80068f84  4 GXTokenInterruptHandler 	Global
+  80069008 000044 80069008  4 GXSetDrawDoneCallback 	Global
+  8006904c 000080 8006904c  4 GXFinishInterruptHandler 	Global
   800690cc 000064 800690cc  4 GXMisc:__GXPEInit 	Global
-  80069130 000104 80069130  4 zz_80069130_ 	Global
-  80069234 0000e0 80069234  4 zz_80069234_ 	Global
-  80069314 000368 80069314  4 zz_80069314_ 	Global
+  80069130 000104 80069130  4 GXCompressZ16 	Global
+  80069234 0000e0 80069234  4 GXDecompressZ16 	Global
+  80069314 000368 80069314  4 GXSetDirtyState 	Global
   8006967c 00007c 8006967c  4 GXBegin 	Global
-  800696f8 000058 800696f8  4 zz_800696f8_ 	Global
+  800696f8 000058 800696f8  4 GXSendFlushPrim 	Global
   80069750 000034 80069750  4 GXSetLineWidth 	Global
-  80069784 000001 80069784  8 zz_80069784_ 	Global
+  80069784 000018 80069784  4 GXGetLineWidth 	Global
   8006979c 000038 8006979c  4 GXSetPointSize 	Global
-  800697d4 000018 800697d4  4 zz_800697d4_ 	Global
+  800697d4 000018 800697d4  4 GXGetPointSize 	Global
   800697ec 000040 800697ec  4 GXEnableTexOffsets 	Global
   8006982c 000044 8006982c  4 GXSetCullMode 	Global
-  80069870 000030 80069870  4 zz_80069870_ 	Global
+  80069870 000030 80069870  4 GXGetCullMode 	Global
   800698a0 000034 800698a0  4 GXSetCoPlanar 	Global
-  800698d4 00001c 800698d4  4 zz_800698d4_ 	Global
+  800698d4 00001c 800698d4  4 __GXSetGenMode 	Global
   800698f0 00002c 800698f0  4 zz_800698f0_ 	Global
   8006991c 000064 8006991c  4 zz_8006991c_ 	Global
   80069980 0000dc 80069980  4 zz_80069980_ 	Global
@@ -2145,131 +2145,133 @@
   80069ac0 00005c 80069ac0  4 zz_80069ac0_ 	Global
   80069b1c 000090 80069b1c  4 zz_80069b1c_ 	Global
   80069b78 000001 80069b78  8 zz_80069b78_ 	Global
-  80069bac 0000fc 80069bac  4 zz_80069bac_ 	Global
+  80069bac 0000fc 80069bac  4 GXAdjustForOverscan 	Global
   80069ca8 000038 80069ca8  4 GXSetDispCopySrc 	Global
-  80069ce0 000038 80069ce0  4 zz_80069ce0_ 	Global
+  80069ce0 000038 80069ce0  4 GXStTexCopySrc 	Global
   80069d18 000010 80069d18  4 GXSetDispCopyDst 	Global
-  80069d28 000100 80069d28  4 zz_80069d28_ 	Global
+  80069d28 000100 80069d28  4 GXSetTexCopyDst 	Global
   80069e28 000024 80069e28  4 GXSetDispCopyFrame2Field 	Global
   80069e4c 000034 80069e4c  4 GXSetCopyClamp 	Global
-  80069e80 000060 80069e80  4 zz_80069e80_ 	Global
-  80069ee0 00006c 80069ee0  4 zz_80069ee0_ 	Global
-  80069f4c 000230 80069f4c  4 zz_80069f4c_ 	Global
+  80069e80 000060 80069e80  4 __GXGetNumXfbLines 	GX
+  80069ee0 00006c 80069ee0  4 GXGetNumXfbLines 	Global
+  80069f4c 000230 80069f4c  4 GXGetYScaleFactor 	Global
   8006a17c 0000b0 8006a17c  4 GXSetDispCopyYScale 	Global
   8006a22c 00004c 8006a22c  4 GXSetCopyClear 	GXFrameBuf
   8006a278 00028c 8006a278  4 GXSetCopyFilter 	Global
   8006a504 000018 8006a504  4 GXSetDispCopyGamma 	Global
-  8006a51c 000114 8006a51c  4 zz_8006a51c_ 	Global
+  8006a51c 000114 8006a51c  4 GXCopyDisp 	Global
   8006a630 000138 8006a630  4 GXCopyTex 	Global
   8006a768 000030 8006a768  4 GXClearBoundingBox 	Global
-  8006a798 000028 8006a798  4 zz_8006a798_ 	Global
+  8006a798 000028 8006a798  4 GXReadBoundingBox 	Global
   8006a7c0 00001c 8006a7c0  4 GXInitLightAttn 	Global
-  8006a7dc 000010 8006a7dc  4 FUN_8006a7dc 	Global
-  8006a7ec 00001c 8006a7ec  4 zz_8006a7ec_ 	Global
-  8006a808 000010 8006a808  4 FUN_8006a808 	Global
-  8006a818 00001c 8006a818  4 zz_8006a818_ 	Global
-  8006a834 0001d0 8006a834  4 zz_8006a834_ 	Global
-  8006aa04 0000e8 8006aa04  4 zz_8006aa04_ 	Global
-  8006aaec 000010 8006aaec  4 FUN_8006aaec 	Global
-  8006aafc 00001c 8006aafc  4 zz_8006aafc_ 	Global
-  8006ab18 00001c 8006ab18  4 zz_8006ab18_ 	Global
-  8006ab34 000028 8006ab34  4 zz_8006ab34_ 	Global
-  8006ab5c 0000ac 8006ab5c  4 zz_8006ab5c_ 	Global
-  8006ac08 000001 8006ac08  8 zz_8006ac08_ 	Global
+  8006a7dc 000010 8006a7dc  4 GXInitLightAttnA 	Global
+  8006a7ec 00001c 8006a7ec  4 GXGetLightAttnA 	Global
+  8006a808 000010 8006a808  4 GXInitLightAttnK 	Global
+  8006a818 00001c 8006a818  4 GXGetLightAttnK 	Global
+  8006a834 0001d0 8006a834  4 GXInitLightSpot 	Global
+  8006aa04 0000e8 8006aa04  4 GXInitLightDistAttn 	Global
+  8006aaec 000010 8006aaec  4 GXInitLightPos 	Global
+  8006aafc 00001c 8006aafc  4 GXGetLightPos 	Global
+  8006ab18 00001c 8006ab18  4 GXInitLightDir 	Global
+  8006ab34 000028 8006ab34  4 GXGetLightDir 	Global
+  8006ab5c 0000ac 8006ab5c  4 GXInitSpecularDir 	Global
+  8006ac08 00003c 8006ac08  4 GXInitSpecularDirHA 	Global
   8006ac44 00000c 8006ac44  4 GXInitLightColor 	Global
-  8006ac50 000028 8006ac50  4 zz_8006ac50_ 	Global
-  8006ac78 000120 8006ac78  4 zz_8006ac78_ 	Global
-  8006ad98 0000b4 8006ad98  4 zz_8006ad98_ 	Global
+  8006ac50 000028 8006ac50  4 GXGetLightColor 	Global
+  8006ac78 000120 8006ac78  4 GXLoadLightObjImm 	Global
+  8006ad98 0000b4 8006ad98  4 GXLoadLightObjIndx 	Global
   8006ae4c 0000bc 8006ae4c  4 GXSetChanAmbColor 	Global
   8006af08 0000bc 8006af08  4 GXSetChanMatColor 	Global
   8006afc4 000024 8006afc4  4 GXSetNumChans 	Global
   8006afe8 000120 8006afe8  4 GXSetChanCtrl 	Global
-  8006b108 00005c 8006b108  4 zz_8006b108_ 	Global
-  8006b164 000174 8006b164  4 zz_8006b164_ 	Global
-  8006b2d8 0000e8 8006b2d8  4 zz_8006b2d8_ 	Global
-  8006b3c0 000258 8006b3c0  4 zz_8006b3c0_ 	Global
-  8006b618 000040 8006b618  4 zz_8006b618_ 	Global
-  8006b658 000164 8006b658  4 zz_8006b658_ 	Global
-  8006b7bc 000001 8006b7bc  8 zz_8006b7bc_ 	Global
-  8006b7d4 000001 8006b7d4  8 GXInitTexObjUserData 	gx
-  8006b7dc 00003c 8006b7dc  4 zz_8006b7dc_ 	Global
-  8006b818 000001 8006b818  8 zz_8006b818_ 	Global
-  8006b874 000001 8006b874  8 zz_8006b874_ 	Global
-  8006b8cc 000001 8006b8cc  8 zz_8006b8cc_ 	Global
-  8006b938 000001 8006b938  8 zz_8006b938_ 	Global
-  8006b950 000001 8006b950  8 zz_8006b950_ 	Global
-  8006b970 000018 8006b970  4 zz_8006b970_ 	Global
-  8006b988 000001 8006b988  8 GXInitTexObjUserData 	gx
-  8006b990 000020 8006b990  4 zz_8006b990_ 	Global
-  8006b9b8 000080 8006b9b8  4 zz_8006b9b8_ 	Global
-  8006ba38 00000c 8006ba38  4 zz_8006ba38_ 	Global
-  8006ba44 000010 8006ba44  4 zz_8006ba44_ 	Global
-  8006ba54 000010 8006ba54  4 zz_8006ba54_ 	Global
-  8006ba64 000008 8006ba64  4 GXGetTexObjFmt? 	Global
-  8006ba6c 000001 8006ba6c  8 zz_8006ba6c_ 	Global
-  8006ba78 00000c 8006ba78  4 zz_8006ba78_ 	Global
-  8006ba84 000001 8006ba84  8 zz_8006ba84_ 	Global
-  8006ba90 000110 8006ba90  4 zz_8006ba90_ 	Global
-  8006bba0 000001 8006bba0  8 zz_8006bba0_ 	Global
-  8006bbb4 000001 8006bbb4  8 zz_8006bbb4_ 	Global
-  8006bbc0 00003c 8006bbc0  4 zz_8006bbc0_ 	Global
-  8006bbfc 00003c 8006bbfc  4 zz_8006bbfc_ 	Global
-  8006bc38 000001 8006bc38  8 zz_8006bc38_ 	Global
-  8006bc90 000001 8006bc90  8 zz_8006bc90_ 	Global
-  8006bc9c 000001 8006bc9c  8 zz_8006bc9c_ 	Global
-  8006bcb0 000001 8006bcb0  8 zz_8006bcb0_ 	Global
-  8006bcc4 000118 8006bcc4  4 zz_8006bcc4_ 	Global
-  8006bddc 00004c 8006bddc  4 zz_8006bddc_ 	Global
-  8006be28 00002c 8006be28  4 zz_8006be28_ 	Global
-  8006be54 000001 8006be54  8 zz_8006be54_ 	Global
-  8006be78 000001 8006be78  8 zz_8006be78_ 	Global
-  8006be84 000001 8006be84  8 zz_8006be84_ 	Global
-  8006be90 000001 8006be90  8 J3DShapeMtxMulti::getUseMtxNum(void) 	const
-  8006be98 000090 8006be98  4 zz_8006be98_ 	Global
-  8006bf28 0000c4 8006bf28  4 zz_8006bf28_ 	Global
-  8006bfec 00003c 8006bfec  4 zz_8006bfec_ 	Global
-  8006c028 000001 8006c028  8 zz_8006c028_ 	Global
+  8006b108 00005c 8006b108  4 __GXGetTexTileShift 	GXTexture
+  8006b164 000174 8006b164  4 GXGetTexBufferSize 	Global
+  8006b2d8 0000e8 8006b2d8  4 __GetImageTileCount 	GX
+  8006b3c0 000258 8006b3c0  4 GXInitTexObj 	Global
+  8006b618 000040 8006b618  4 GXInitTexObjCI 	Global
+  8006b658 000164 8006b658  4 GXInitTexObjLOD 	Global
+  8006b7bc 000018 8006b7bc  4 GXInitTexObjData 	Global
+  8006b7d4 000008 8006b7d4  4 GXInitTexObjUserData 	gx
+  8006b7dc 00003c 8006b7dc  4 GXSubfunction? 	Global
+  8006b818 00005c 8006b818  4 GXSubfunction? 	Global
+  8006b874 000058 8006b874  4 GXSubfunction? 	Global
+  8006b8cc 00006c 8006b8cc  4 GXSubfunction? 	Global
+  8006b938 000018 8006b938  4 GXSubfunction? 	Global
+  8006b950 000020 8006b950  4 GXSubfunction? 	Global
+  8006b970 000018 8006b970  4 GXSubfunction? 	Global
+  8006b988 000008 8006b988  4 GXInitTexObjUserData 	gx
+  8006b990 000020 8006b990  4 GXInitTexObjWrapMode 	Global
+  8006b9b0 000008 8006b9b0  4 GXGetTexObjUserData 	Global
+  8006b9b8 000080 8006b9b8  4 GXGetTexObjAll 	Global
+  8006ba38 00000c 8006ba38  4 GXGetTexObjData 	Global
+  8006ba44 000010 8006ba44  4 GXGetTexObjWidth 	Global
+  8006ba54 000010 8006ba54  4 GXGetTexObjHeight 	Global
+  8006ba64 000008 8006ba64  4 GXGetTexObjFmt 	Global
+  8006ba6c 00000c 8006ba6c  4 GXGetTexObjWrapS 	Global
+  8006ba78 00000c 8006ba78  4 GXGetTexObjWrapT 	Global
+  8006ba84 00000c 8006ba84  4 GXGetTexObjMipMap 	Global
+  8006ba90 000110 8006ba90  4 GXGetTexObjLODAll 	Global
+  8006bba0 000014 8006bba0  4 GXGetTexObjMinFilt 	Global
+  8006bbb4 00000c 8006bbb4  4 GXGetTexObjMagFilt 	Global
+  8006bbc0 00003c 8006bbc0  4 GXGetTexObjMinLOD 	Global
+  8006bbfc 00003c 8006bbfc  4 GXGetTexObjMaxLOD 	Global
+  8006bc38 000058 8006bc38  4 GXGetTexObjLODBias 	Global
+  8006bc90 00000c 8006bc90  4 GXGetTexObjBiasClamp 	Global
+  8006bc9c 000014 8006bc9c  4 GXGetTexObjEdgeLOD 	Global
+  8006bcb0 00000c 8006bcb0  4 GXGetTexObjMaxAniso 	Global
+  8006bcbc 000008 8006bcbc  4 GXGetTexObjTlut 	Global
+  8006bcc4 000118 8006bcc4  4 GXLoadTexObjPreLoaded 	Global
+  8006bddc 00004c 8006bddc  4 GXLoadTexObj 	Global
+  8006be28 00002c 8006be28  4 GXInitTlutObj 	Global
+  8006be54 000024 8006be54  4 GXGetTlutObjAll 	Global
+  8006be78 00000c 8006be78  4 GXGetTlutObjData 	Global
+  8006be84 00000c 8006be84  4 GXGetTlutObjFmt 	Global
+  8006be90 000008 8006be90  4 GXGetTlutObjNumEntries 	Global
+  8006be98 000090 8006be98  4 GXLoadTlut 	Global
+  8006bf28 0000c4 8006bf28  4 GXInitTexCacheRegion 	Global
+  8006bfec 00003c 8006bfec  4 GXInitTexPreLoadRegion 	Global
+  8006c028 000100 8006c028  4 GXGetTexRegionAll 	Global
   8006c128 000020 8006c128  4 GXInitTlutRegion 	Global
-  8006c148 000001 8006c148  8 zz_8006c148_ 	Global
-  8006c168 000110 8006c168  4 zz_8006c168_ 	Global
+  8006c148 000020 8006c148  4 GXGetTlutRegionAll 	Global
+  8006c168 000110 8006c168  4 GXInvalidateTexRegion 	Global
   8006c278 00004c 8006c278  4 GXInvalidateTexAll 	Global
   8006c2c4 000010 8006c2c4  4 GXSetTexRegionCallback 	Global
   8006c2d4 000010 8006c2d4  4 GXSetTlutRegionCallback 	Global
   8006c2e4 000274 8006c2e4  4 zz_8006c2e4_ 	Global
-  8006c558 000001 8006c558  8 zz_8006c558_ 	Global
-  8006c5d4 000001 8006c5d4  8 zz_8006c5d4_ 	Global
-  8006c638 000001 8006c638  8 zz_8006c638_ 	Global
-  8006c69c 000254 8006c69c  4 zz_8006c69c_ 	Global
+  8006c558 00007c 8006c558  4 zz_8006c558_ 	Global
+  8006c5d4 000064 8006c5d4  4 zz_8006c5d4_ 	Global
+  8006c638 000064 8006c638  4 zz_8006c638_ 	Global
+  8006c69c 000254 8006c69c  4 __GXSetSUTexRegs 	Global
   8006c8f0 000001 8006c8f0  8 zz_8006c8f0_ 	Global
   8006c914 000200 8006c914  4 __GXSetTmemConfig 	Global
-  8006cb14 0001c8 8006cb14  4 zz_8006cb14_ 	Global
-  8006ccdc 0001ac 8006ccdc  4 zz_8006ccdc_ 	Global
+  8006cb14 0001c8 8006cb14  4 GXSetTevIndirect 	GXBump
+  8006ccdc 0001ac 8006ccdc  4 GXSetIndTexMtx 	Global
   8006ce88 0000e4 8006ce88  4 GXSetIndTexCoordScale 	Global
-  8006cf6c 0000c8 8006cf6c  4 zz_8006cf6c_ 	Global
+  8006cf6c 0000c8 8006cf6c  4 GXSetIndTexOrder 	Global
   8006d034 000024 8006d034  4 GXSetNumIndStages 	Global
   8006d058 000020 8006d058  4 GXSetTevDirect 	Global
-  8006d078 000074 8006d078  4 zz_8006d078_ 	Global
-  8006d0ec 0001c0 8006d0ec  4 zz_8006d0ec_ 	Global
-  8006d2ac 000001 8006d2ac  8 zz_8006d2ac_ 	Global
-  8006d398 000001 8006d398  8 zz_8006d398_ 	Global
-  8006d3e0 000001 8006d3e0  8 zz_8006d3e0_ 	Global
-  8006d40c 0000b8 8006d40c  4 zz_8006d40c_ 	Global
+  8006d078 000074 8006d078  4 GXSetTevIndWarp 	Global
+  8006d0ec 0001c0 8006d0ec  4 GXSetTevIndTile 	Global
+  8006d2ac 0000ec 8006d2ac  4 GXSetTevIndBumpST 	Global
+  8006d398 000048 8006d398  4 GXSetTevIndBumpXYZ 	Global
+  8006d3e0 00002c 8006d3e0  4 GXSetTevIndRepeat 	Global
+  8006d40c 0000b8 8006d40c  4 __GXUpdateBPMask 	Global
   8006d4c4 00001c 8006d4c4  4 __GXFlushTextureState 	GXBump
-  8006d4e0 000001 8006d4e0  8 zz_8006d4e0_ 	Global
-  8006d56c 00014c 8006d56c  4 GXSetTevOp? 	Global
-  8006d6b8 00004c 8006d6b8  4 zz_8006d6b8_ 	Global
-  8006d704 000050 8006d704  4 zz_8006d704_ 	Global
-  8006d754 000090 8006d754  4 zz_8006d754_ 	Global
-  8006d7e4 000090 8006d7e4  4 zz_8006d7e4_ 	Global
+  8006d4e0 00008c 8006d4e0  4 zz_8006d4e0_ 	Global
+  8006d56c 00014c 8006d56c  4 GXSetTevOp 	GXTev
+  8006d6b8 00004c 8006d6b8  4 GXSetTevColorIn 	Global
+  8006d704 000050 8006d704  4 GXSetTevAlphaIn 	Global
+  8006d754 000090 8006d754  4 GXSetTevColorOp 	Global
+  8006d7e4 000090 8006d7e4  4 GXSetTevAlphaOp 	Global
   8006d800 000001 8006d800  8 zz_8006d800_ 	Global
-  8006d874 000068 8006d874  4 zz_8006d874_ 	Global
-  8006d8dc 000001 8006d8dc  8 zz_8006d8dc_ 	Global
-  8006d948 000001 8006d948  8 zz_8006d948_ 	Global
+  8006d874 000068 8006d874  4 GXSetTevColor 	Global
+  8006d8dc 00006c 8006d8dc  4 GXSetTevColorS10 	Global
+  8006d948 000060 8006d948  4 GXSetTevKColor 	Global
   8006d9a8 000054 8006d9a8  4 GXSetTevKColorSel 	Global
   8006d9fc 000054 8006d9fc  4 GXSetTevKAlphaSel 	Global
   8006da50 00003c 8006da50  4 GXSetTevSwapMode 	Global
   8006da8c 000060 8006da8c  4 GXSetTevSwapModeTable 	Global
-  8006daec 000004 8006daec  4 FUN_8006daec 	Global
+  8006daec 000004 8006daec  4 GXSetTevClampMode 	Global
   8006daf0 000048 8006daf0  4 GXSetAlphaCompare 	Global
   8006db38 000068 8006db38  4 GXSetZTexture 	Global
   8006db80 000001 8006db80  8 zz_8006db80_ 	Global
@@ -2278,7 +2280,7 @@
   8006dd40 000034 8006dd40  4 zz_8006dd40_ 	Global
   8006dd74 000034 8006dd74  4 zz_8006dd74_ 	Global
   8006dda8 0001b0 8006dda8  4 GXSetFog 	Global
-  8006df58 000178 8006df58  4 zz_8006df58_ 	Global
+  8006df58 000178 8006df58  4 GXInitFoxAdjTable 	Global
   8006e0d0 000084 8006e0d0  4 GXInitFogAdjTable 	Global
   8006e154 000090 8006e154  4 GXSetBlendMode 	Global
   8006e1e4 00002c 8006e1e4  4 GXSetColorUpdate 	Global
@@ -2290,57 +2292,56 @@
   8006e3a4 000030 8006e3a4  4 GXSetDstAlpha 	Global
   8006e3d4 000028 8006e3d4  4 GXSetFieldMask 	Global
   8006e3fc 00006c 8006e3fc  4 GXSetFieldMode 	Global
-  8006e468 000084 8006e468  4 zz_8006e468_ 	Global
-  8006e4ec 000038 8006e4ec  4 zz_8006e4ec_ 	Global
-  8006e524 00002c 8006e524  4 zz_8006e524_ 	Global
-  8006e550 000048 8006e550  4 zz_8006e550_ 	Global
-  8006e598 000078 8006e598  4 zz_8006e598_ 	Global
-  8006e610 000038 8006e610  4 zz_8006e610_ 	Global
-  8006e648 000070 8006e648  4 zz_8006e648_ 	Global
-  8006e6b8 00013c 8006e6b8  4 zz_8006e6b8_ 	Global
-  8006e7f4 000030 8006e7f4  4 zz_8006e7f4_ 	Global
-  8006e824 000290 8006e824  4 FUN_8006e824 	Global
-  8006eab4 0002e0 8006eab4  4 zz_8006eab4_ 	Global
-  8006ed94 000308 8006ed94  4 zz_8006ed94_ 	Global
+  8006e468 000084 8006e468  4 GXGetVertState 	GXDraw
+  8006e4ec 000038 8006e4ec  4 GXRestoreVertState 	Global
+  8006e524 00002c 8006e524  4 GXvsub 	Global
+  8006e550 000048 8006e550  4 GXvcross 	Global
+  8006e598 000078 8006e598  4 GXnormalize 	Global
+  8006e610 000038 8006e610  4 GXmyvertex 	Global
+  8006e648 000070 8006e648  4 GXDumpTriangle 	Global
+  8006e6b8 00013c 8006e6b8  4 GXsubdivide 	Global
+  8006e7f4 000030 8006e7f4  4 GXSubDivTriangle 	Global
+  8006e824 000290 8006e824  4 GXDrawCylinder 	Global
+  8006eab4 0002e0 8006eab4  4 GXDrawTorus 	Global
+  8006ed94 000308 8006ed94  4 GXDrawSphere 	Global
   8006ee3c 000001 8006ee3c  8 zz_8006ee3c_ 	Global
-  8006f09c 0001d0 8006f09c  4 normalization? 	Global
-  8006f26c 0001fc 8006f26c  4 zz_8006f26c_ 	Global
-  8006f468 000158 8006f468  4 zz_8006f468_ 	Global
-  8006f5c0 000050 8006f5c0  4 zz_8006f5c0_ 	Global
-  8006f610 000050 8006f610  4 FUN_8006f610 	Global
-  8006f660 00005c 8006f660  4 FUN_8006f660 	Global
-  8006f6bc 000034 8006f6bc  4 zz_8006f6bc_ 	Global
-  8006f6f0 0000ac 8006f6f0  4 zz_8006f6f0_ 	Global
+  8006f09c 0001d0 8006f09c  4 GXDrawCubeFace 	Global
+  8006f26c 0001fc 8006f26c  4 GXDrawCube 	Global
+  8006f468 000158 8006f468  4 GXDrawDodeca 	Global
+  8006f5c0 000050 8006f5c0  4 GXDrawOctahedron 	Global
+  8006f610 000050 8006f610  4 GXDrawIcosahedron 	Global
+  8006f660 00005c 8006f660  4 GXDrawSphere1 	Global
+  8006f6bc 000034 8006f6bc  4 GXCmpNormal132 	Global
+  8006f6f0 0000ac 8006f6f0  4 GXAddNormal 	Global
   8006f728 000001 8006f728  8 zz_8006f728_ 	Global
-  8006f79c 000144 8006f79c  4 zz_8006f79c_ 	Global
-  8006f8e0 000030 8006f8e0  4 zz_8006f8e0_ 	Global
-  8006f910 000068 8006f910  4 FUN_8006f910 	Global
-  8006f978 0000d0 8006f978  4 zz_8006f978_ 	Global
-  8006fa48 0000cc 8006fa48  4 zz_8006fa48_ 	Global
+  8006f79c 000144 8006f79c  4 GXSubdivideNrm 	Global
+  8006f8e0 000030 8006f8e0  4 GXSubDivNrm 	Global
+  8006f910 000068 8006f910  4 GXGenNormalTable 	Global
+  8006f978 0000d0 8006f978  4 GXBeginDisplayList 	Global
+  8006fa48 0000cc 8006fa48  4 GXEndDisplayList 	Global
   8006fb14 000074 8006fb14  4 GXCallDisplayList 	Global
-  8006fb88 000001 8006fb88  8 zz_8006fb88_ 	Global
-  8006fcc0 000060 8006fcc0  4 zz_8006fcc0_ 	Global
-  8006fd20 00008c 8006fd20  4 zz_8006fd20_ 	Global
+  8006fb88 000138 8006fb88  4 GXProject 	GXTransform
+  8006fcc0 000060 8006fcc0  4 GXSetProjection 	Global
+  8006fd20 00008c 8006fd20  4 GXSetProjectionv 	Global
   8006fd48 000001 8006fd48  8 zz_8006fd48_ 	Global
-  8006fdac 000064 8006fdac  4 zz_8006fdac_ 	Global
+  8006fdac 000064 8006fdac  4 GXGetProjectionv 	Global
   8006fe10 000054 8006fe10  4 GXLoadPosMtxImm 	Global
-  8006fe64 000001 8006fe64  8 zz_8006fe64_ 	Global
+  8006fe64 000028 8006fe64  4 GXLoadPosMtxIndx 	Global
   8006fe8c 000058 8006fe8c  4 GXLoadNrmMtxImm 	Global
-  8006fee4 000050 8006fee4  4 GXLoadTexMtxImm 	Global
-  8006ff34 000001 8006ff34  8 zz_8006ff34_ 	Global
+  8006fee4 000050 8006fee4  4 GXLoadNrmMtxImm3x3 	Global
+  8006ff34 00002c 8006ff34  4 GXLoadNrmMtxIndx3x3 	Global
   8006ff60 000020 8006ff60  4 GXSetCurrentMtx 	Global
-  8006ff80 0000b4 8006ff80  4 GXLoadTexMtxImm 	Global
-  80070034 000001 80070034  8 zz_80070034_ 	Global
-  80070088 00007c 80070088  4 GXSetProjectionv? 	Global
+  8006ff80 0000b4 8006ff80  4 GXLoadTexMtxImm(InlineWriteMTXPS4x4andWriteMTXPS4x2?) 	Global
+  80070034 000054 80070034  4 GXLoadTexMtxIndx 	Global
+  80070088 00007c 80070088  4 GXSetViewportJitter 	Global
   80070104 000008 80070104  4 GXSetViewport 	Global
-  8007010c 000034 8007010c  4 zz_8007010c_ 	Global
-  8007010c 000034 8007010c  4 possiblyObject? 	zz_8007010c_
+  8007010c 000034 8007010c  4 GXGetViewportv 	Global
   80070140 000070 80070140  4 GXSetScissor 	Global
-  800701b0 000001 800701b0  8 zz_800701b0_ 	Global
+  800701b0 000044 800701b0  4 GXGetScissor 	Global
   800701f4 000038 800701f4  4 GXSetScissorBoxOffset 	Global
   8007022c 000024 8007022c  4 GXSetClipMode 	Global
-  80070250 00007c 80070250  4 zz_80070250_ 	Global
-  800702cc 00052c 800702cc  4 GXSetGPMetric? 	Global
+  80070250 00007c 80070250  4 __GXSetMatrixIndex 	Global
+  800702cc 00052c 800702cc  4 GXSetGPMetric 	Global
   800707f8 00010c 800707f8  4 zz_800707f8_ 	Global
   80070904 000010 80070904  4 GXClearGPMetric 	Global
   80070914 00002c 80070914  4 zz_80070914_ 	Global
@@ -2355,7 +2356,7 @@
   80070c34 000040 80070c34  4 zz_80070c34_ 	Global
   80070c74 000058 80070c74  4 zz_80070c74_ 	Global
   80070ccc 000038 80070ccc  4 zz_80070ccc_ 	Global
-  80070d04 000004 80070d04  4 __GXSetViewport??? 	Global
+  80070d04 000004 80070d04  4 __GXSetRange 	Global
   80070d08 000040 80070d08  4 zz_80070d08_ 	Global
   80070d48 0005b4 80070d48  4 zz_80070d48_ 	Global
   800712fc 0001d8 800712fc  4 zz_800712fc_ 	Global
@@ -3232,15 +3233,15 @@
   8009a4d8 000014 8009a4d8  4 DSPSendMailToDSP 	Global
   8009a4ec 000040 8009a4ec  4 zz_8009a4ec_ 	Global
   8009a52c 0000c4 8009a52c  4 DSPInit 	DSP
-  8009a5f0 000001 8009a5f0  8 IPCGetBufferLo 	ipc
+  8009a5f0 000008 8009a5f0  4 IPCGetBufferLo 	ipc
   8009a5f8 000048 8009a5f8  4 zz_8009a5f8_ 	Global
   8009a640 000040 8009a640  4 zz_8009a640_ 	Global
   8009a680 00003c 8009a680  4 zz_8009a680_ 	Global
   8009a6bc 000010 8009a6bc  4 __ARGetInterruptStatus 	Global
   8009a6cc 000070 8009a6cc  4 DSPAddTask 	Global
-  8009a73c 000001 8009a73c  8 DSPCancelTask 	Global
+  8009a73c 000040 8009a73c  4 DSPCancelTask 	Global
   8009a77c 0000c8 8009a77c  4 zz_8009a77c_ 	Global
-  8009a844 000001 8009a844  8 __DSPHandler 	Global
+  8009a844 000424 8009a844  4 __DSPHandler 	Global
   8009ac68 0001a0 8009ac68  4 __DSP_exec_task 	Global
   8009ae08 00018c 8009ae08  4 __DSP_boot_task 	Global
   8009af94 0000a0 8009af94  4 __DSP_insert_task 	Global
@@ -3257,7 +3258,7 @@
   8009b63c 00006c 8009b63c  4 zz_8009b63c_ 	Global
   8009b6a8 000058 8009b6a8  4 zz_8009b6a8_ 	Global
   8009b700 00004c 8009b700  4 zz_8009b700_ 	Global
-  8009b74c 000488 8009b74c  4 zz_8009b74c_ 	Global
+  8009b74c 000488 8009b74c  4 gxMtxRelated?48 	Global
   8009bbd4 000084 8009bbd4  4 zz_8009bbd4_ 	Global
   8009bc58 00008c 8009bc58  4 zz_8009bc58_ 	Global
   8009bd00 000001 8009bd00  8 zz_80003bd8_ 	RAM
@@ -5152,6 +5153,7 @@
   80158864 000001 80158864  8 s_Stream_Hanger_80158864 	Global
   80158874 000001 80158874  8 s_IS-DOL-VIEWER_80158874 	Global
   80158888 000001 80158888  8 s_<<_Dolphin_SDK_-_THP_release_bui_80158888 	Global
+  8015922c 000001 8015922c  8 ondex 	Global
   801595d8 000001 801595d8  8 switchdataD_801595d8 	switchD_8007ed48
   80159f48 000001 80159f48  8 switchdataD_80159f48 	switchD_80089c58
   80159f4c 000001 80159f4c  8 gdev_cc_shutdown 	RAM
@@ -6023,6 +6025,15 @@
   802436b0 000001 802436b0  8 someBigSectionThatDoesNotSeemUseful 	RAM
   80243c14 000001 80243c14  8 GetTypeCallback 	RAM
   80243de8 000001 80243de8  8 __CARDExtHandler 	RAM
+  80243fd0 000001 80243fd0  8 vcd 	Global
+  802440a8 000001 802440a8  8 vat 	Global
+  80244258 000001 80244258  8 DisplayListFifo 	Global
+  8024425c 000001 8024425c  8 DisplayListFifo 	Global
+  80244260 000001 80244260  8 DisplayListFifo 	Global
+  8024426c 000001 8024426c  8 DisplayListFifo 	Global
+  80244270 000001 80244270  8 DisplayListFifo 	Global
+  80244274 000001 80244274  8 DisplayListFifo 	Global
+  8024427c 000001 8024427c  8 __savedGXdata 	Global
   80259350 000001 80259350  8 s_<<<<<<<<<<<<<<<<<<<<?<<<<_80259350 	Global
   80259390 000001 80259390  8 s__80259390 	Global
   802593ac 000001 802593ac  8 aramQueueCallback 	RAM
@@ -6059,6 +6070,7 @@
   80275418 000001 80275418  8 zz_804b3754_ 	RAM
   80275420 000001 80275420  8 zz_800270c8_ 	RAM
   802cc065 000001 802cc065  8 s__802cc065 	Global
+  802d7400 000001 802d7400  8 FifoObj 	Global
   802d7498 000001 802d7498  8 0.0 	Global
   802d749c 000001 802d749c  8 1.0 	Global
   802d74a4 000001 802d74a4  8 FLOAT_802d74a4 	Global
@@ -6224,6 +6236,8 @@
   802d7c5c 000001 802d7c5c  8 s_RS232C_802d7c5c 	Global
   802d7c64 000001 802d7c64  8 s_Mic_802d7c64 	Global
   802d7c68 000001 802d7c68  8 s_Unknown_802d7c68 	Global
+  802d7cb8 000001 802d7cb8  8 GX2HWFiltConv 	Global
+  802d7cc0 000001 802d7cc0  8 HW2GXFiltConv 	Global
   802d7d48 000001 802d7d48  8 zz_8000bfa0_ 	RAM
   802d7d5c 000001 802d7d5c  8 windSFXIntensity(UsingBits) 	Global
   802d7e08 000001 802d7e08  8 relatedToMemoryCardSave 	Global
@@ -6248,17 +6262,25 @@
   802d81f8 000001 802d81f8  8 someBigSectionThatDoesNotSeemUseful 	RAM
   802d81fc 000001 802d81fc  8 someBigSectionThatDoesNotSeemUseful 	RAM
   802d8360 000001 802d8360  8 __piReg 	Global
-  802d8364 000001 802d8364  8 __cpREeg??? 	Global
+  802d8364 000001 802d8364  8 __cpReg 	Global
   802d8368 000001 802d8368  8 __peReg 	Global
   802d836c 000001 802d836c  8 __memReg 	Global
+  802d8378 000001 802d8378  8 __GXCurrentThread 	Global
+  802d8380 000001 802d8380  8 GXOverflowSuspendInProgress 	Global
   802d8384 000001 802d8384  8 zz_8001f724_ 	RAM
-  802d8390 000001 802d8390  8 zz_8001b0a4_ 	RAM
-  802d8394 000001 802d8394  8 zz_8001f79c_ 	RAM
+  802d8388 000001 802d8388  8 __GXOverflowCount 	Global
+  802d8390 000001 802d8390  8 TokenCB 	RAM
+  802d8394 000001 802d8394  8 DrawDoneCB 	RAM
+  802d8398 000001 802d8398  8 DrawDone 	Global
+  802d839c 000001 802d839c  8 FinishQueue 	Global
+  802d83a8 000001 802d83a8  8 nrm_cnt 	Global
+  802d83ac 000001 802d83ac  8 nrm_tab 	Global
+  802d83b0 000001 802d83b0  8 OldCPUFifo 	Global
   802d846c 000001 802d846c  8 zz_80011a00_ 	RAM
   802d8470 000001 802d8470  8 zz_80011a28_ 	RAM
   802d84bc 000001 802d84bc  8 snd_handle_irq 	RAM
   802d8568 000001 802d8568  8 zz_800951a4_ 	RAM
-  802dfed0 000001 802dfed0  8 zz_80065c74_ 	RAM
+  802dfd8c 000001 802dfd8c  8 gx 	Global
   802dfed4 000001 802dfed4  8 zz_80065ce0_ 	RAM
   802dfee4 000001 802dfee4  8 0.003125 	Global
   802dfee8 000001 802dfee8  8 -1.0 	Global
