@@ -1,1 +1,0 @@
-put these in a directory of decompressed binary files. it iterates through the files in the directory looking for the TPL header, and renames files if they have the TPL file magic.
